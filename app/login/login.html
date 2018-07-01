@@ -21,11 +21,13 @@
                     <input type="password" class="form-control" placeholder="Password" name="password" ng-model="user.password" ng-minLength="8" required/>
                     <p class="help-block" ng-if="loginForm.password.$invalid && loginForm.password.$dirty">Please Enter at least 8 characters</p>
                 </div>
-                <button class="btn btn-default pull-right" ng-disabled="loginForm.emails.$invalid || loginForm.password.$invalid">Sign In</button>
+                <button class="btn btn-default pull-right">SIGN IN</button>
+                <!-- ng-disabled="loginForm.emails.$invalid || loginForm.password.$invalid" -->
             </form>
             <!-- form end -->
         </div>
     </div>
+    <hr/>
     <div class="products-container">
         <div class="product" ng-repeat="product in productList">
             <img class="logo-product" title="Product" src="{{product.src || './../img/logo@2X2.png'}}">
