@@ -1,0 +1,15 @@
+/* login css stylesheet */
+
+.login .header .logo-header {
+    width: 200px;
+    height: auto;
+    padding: 0 50px;
+}
+
+.login .login-container {
+    max-width: 320px;
+    height: 420px;
+    border: 3px solid #eaeaea;
+    margin: 0 auto;
+    margin-top: 40px;
+}
