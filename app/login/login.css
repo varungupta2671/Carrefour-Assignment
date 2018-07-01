@@ -4,6 +4,15 @@
     width: 200px;
     height: auto;
     padding: 0 50px;
+    cursor: pointer;
+}
+
+.login .header .search .logo-search {
+    background: #9bcee640;
+    border-radius: 4px;
+    margin: 20px 50px;
+    float: right;
+    cursor: pointer;
 }
 
 .login .login-container {
