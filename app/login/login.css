@@ -36,6 +36,7 @@
 
 .login>.login-container>.container-header>p {
     margin-top: 4px;
+    margin-bottom: 30px;
     font-size: 14px;
 }
 
@@ -112,6 +113,12 @@
     width: 278px;
     border-radius: 6px;
     border: 2px solid #0053a1;
+    cursor: pointer;
+}
+
+.form-horizontal .btn:disabled {
+    background-color: #0053a1ad;
+    border-color: #0053a1ad;
 }
 
 .help-block {

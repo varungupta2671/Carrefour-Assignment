@@ -11,20 +11,19 @@
             <p>Unlock awesome features!</p>
         </div>
         <div class="container-body">
-            <!--- form -->
+            <!--- login form -->
             <form class="form-horizontal" name="loginForm" novalidate ng-app="formValidationApp">
-                <div class="form-group" ng-class="{'has-error': loginForm.email.$invalid && loginForm.email.$dirty, 'has-success': loginForm.email.$valid }">
+                <div class="form-group" ng-class="{'has-error': loginForm.email.$error.required && loginForm.email.$dirty, 'has-success': loginForm.email.$valid }">
                     <input type="email" class="form-control" placeholder="Email" name="email" ng-model="user.email" required/>
-                    <p class="help-block" ng-if="loginForm.email.$invalid && loginForm.email.$dirty">Please Enter a valid email address</p>
+                    <p class="help-block" ng-if="loginForm.email.$error.required && loginForm.email.$dirty">Required field*</p>
                 </div>
-                <div class="form-group" ng-class="{'has-error': loginForm.password.$invalid && loginForm.password.$dirty, 'has-success': loginForm.password.$valid}">
+                <div class="form-group" ng-class="{'has-error': loginForm.password.$error.required && loginForm.password.$dirty, 'has-success': loginForm.password.$valid}">
                     <input type="password" class="form-control" placeholder="Password" name="password" ng-model="user.password" ng-minLength="8" required/>
-                    <p class="help-block" ng-if="loginForm.password.$invalid && loginForm.password.$dirty">Please Enter at least 8 characters</p>
+                    <p class="help-block" ng-if="loginForm.password.$error.required && loginForm.password.$dirty">Required field*</p>
                 </div>
-                <button class="btn btn-default pull-right">SIGN IN</button>
-                <!-- ng-disabled="loginForm.emails.$invalid || loginForm.password.$invalid" -->
+                <button class="btn btn-default pull-right" ng-disabled="loginForm.emails.$error.required || loginForm.password.$error.required" ng-click="submitForm()">SIGN IN</button>
             </form>
-            <!-- form end -->
+            <!-- login form end -->
         </div>
     </div>
     <hr/>
