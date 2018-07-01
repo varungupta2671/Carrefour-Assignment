@@ -14,10 +14,10 @@
     </div>
     <div class="products-container">
         <div class="product" ng-repeat="product in productList">
-            <img class="logo-product" title="Product" src="./../img/logo@2X2.png">
+            <img class="logo-product" title="Product" src="{{product.src || './../img/logo@2X2.png'}}">
             <div class="product-description">
-                <p>iPhone 6 Black</p>
-                <h2>AED 1000</h2>
+                <p>{{product.description || "Product Name"}}</p>
+                <h2>{{product.price || "AED 0000.00"}}</h2>
             </div>
         </div>
     </div>
