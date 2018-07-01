@@ -1,13 +1,13 @@
 /* login css stylesheet */
 
-.login .header .logo-header {
+.login>.header>.logo-header {
     width: 200px;
     height: auto;
     padding: 0 50px;
     cursor: pointer;
 }
 
-.login .header .search .logo-search {
+.login>.header>.search>.logo-search {
     background: #9bcee640;
     border-radius: 4px;
     margin: 20px 50px;
@@ -15,10 +15,26 @@
     cursor: pointer;
 }
 
-.login .login-container {
+.login>.login-container {
     max-width: 320px;
     height: 420px;
     border: 3px solid #eaeaea;
     margin: 0 auto;
     margin-top: 40px;
+    border-radius: 4px;
+}
+
+.login>.login-container>.container-header {
+    text-align: center;
+}
+
+.login>.login-container>.container-header>h2 {
+    font-weight: 200;
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+.login>.login-container>.container-header>p {
+    margin-top: 4px;
+    font-size: 14px;
 }
