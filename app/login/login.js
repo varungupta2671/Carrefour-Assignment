@@ -9,6 +9,7 @@ angular.module('myApp.login', ['ngRoute'])
     });
 }])
 
-.controller('loginCtrl', [function() {
-
+.controller('loginCtrl', ['$scope', function($scope) {
+    console.log("loginCtrl Calling ..");
+    $scope.productList = ["Product1", "Product2", "Product3", "Product4", "Product5"];
 }]);
