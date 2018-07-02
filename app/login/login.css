@@ -15,6 +15,15 @@
     cursor: pointer;
 }
 
+.login>.header>.search>.search-bar {
+    width: 150px;
+    border-radius: 6px;
+    border: 2px solid #eaeaea;
+    padding: 8px 10px;
+    float: right;
+    margin: 20px 50px;
+}
+
 .login>.login-container {
     max-width: 320px;
     height: auto;

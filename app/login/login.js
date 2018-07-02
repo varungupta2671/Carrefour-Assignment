@@ -12,6 +12,7 @@ angular.module('myApp.login', ['ngRoute'])
 .controller('loginCtrl', ['$scope', 'services', function($scope, services) {
 
     $scope.user = [];
+    $scope.searchStatus = false;
     // console.log("loginCtrl Calling ..");
     $scope.productList = [
         { "src": "./../img/logo@2X2.png", "price": "AED 1000", "description": "iPhone 6 Black" },
@@ -28,7 +29,11 @@ angular.module('myApp.login', ['ngRoute'])
         services.callLogin(function(data, response) {
             console.log(response);
         });
-    }
+    };
+
+    $scope.clickSearchEv = function() {
+        $scope.searchStatus = true;
+    };
 }])
 
 .service('services', function($http) {
